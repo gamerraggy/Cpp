@@ -128,9 +128,9 @@ string processGuess(char guess, string word, string guessedWord) {
 
 //main function where the game runs
 int main() {
-	string wordList[] = { "jeremy", "enoch", "raidin","noahstinks", "youlose", "alajndor","pablosanchez", "kennyjr" }; //list of wors to guese
+	string wordList[] = { "jeremy", "enoch", "raidin","noahstinks", "youlose", "alajndor","pablosanchez", "onomatopoeia", "worcestershire", "kennythethirdjr"}; //list of wors to guese
 	srand(time(0)); //seed the random number gen
-	string word = wordList[rand() % 8]; //randomly pick a word from the list
+	string word = wordList[rand() % 10]; //randomly pick a word from the list
 	string guessedWord(word.length(), '_'); //create the guessed word filled wiht underscores
 
 	cout << "Welcome to Hangboy!\n"; //welcome message
