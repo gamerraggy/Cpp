@@ -72,9 +72,9 @@ void displayHangboy() {
 	case 6:
 		cout << "   +---+\n";
 		cout << "   |   |\n";
-		cout << "\\ O / |          YOU SUCK! \n";
+		cout << " \\ O / |          YOU SUCK! \n";
 		cout << "   |   |\n";
-		cout << "  / \\ |\n";
+		cout << "  / \\  |\n";
 		cout << "       |\n";
 		cout << " ============\n";
 		break;
@@ -99,7 +99,7 @@ void display(string guessedWord) {
 string processGuess(char guess, string word, string guessedWord) {
 	bool isCorrect = false;
 	for (int i = 0; i < word.length(); i++) { // loop through each letter in the word
-		if (word[i] == guess && guessedWord[i] == ' ') { //if guess is correct and hasnt been guessed before
+		if (word[i] == guess && guessedWord[i] == '_') { //if guess is correct and hasnt been guessed before
 			guessedWord[i] = guess; //update the guessed word with the new letter
 			isCorrect = true; // mark the guess as correct
 		}
@@ -130,7 +130,7 @@ string processGuess(char guess, string word, string guessedWord) {
 int main() {
 	string wordList[] = { "jeremy", "enoch", "raidin","noahstinks", "youlose", "alajndor","pablosanchez", "kennyjr" }; //list of wors to guese
 	srand(time(0)); //seed the random number gen
-	string word = wordList[rand() % 5]; //randomly pick a word from the list
+	string word = wordList[rand() % 8]; //randomly pick a word from the list
 	string guessedWord(word.length(), '_'); //create the guessed word filled wiht underscores
 
 	cout << "Welcome to Hangboy!\n"; //welcome message
@@ -159,6 +159,7 @@ int main() {
 	}
 	else {
 		cout << "You suck at this game buddy the word was: " << word << "\n"; //lose mesage
+		displayHangboy();
 	}
 
 	return 0; // end of the program
