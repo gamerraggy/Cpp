@@ -5,7 +5,7 @@ bool isVowel(char x);
 
 int main() {
 	
-	isVowel('a');
+	cout<<isVowel('a');
 
 
 
