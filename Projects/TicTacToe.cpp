@@ -7,7 +7,7 @@ bool endGame = false; // runs the game loop
 
 int main() {
 	cout << "Welcome to Tic-Tac-Toe bro" << endl;
-	while (endGame == false;) {
+	while (endGame == false) {
 		cout << "Player " << player << "'s turn!" << endl; << endl;
 
 		if (player == 'X') // if player is X, change to Y
